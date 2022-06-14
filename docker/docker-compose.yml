@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+
+  mysql:
+    image: mysql:8.0.29
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssWord
+      MYSQL_DATABASE: queuearr
+      MYSQL_USER: queuearr
+      MYSQL_PASSWORD: Qu3u3@rr
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
